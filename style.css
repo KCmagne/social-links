@@ -1,0 +1,107 @@
+@font-face{
+    font-family: "Inter";
+    src: url("Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("Inter-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("Inter-SemiBold.ttf");
+    font-weight: 600;
+}
+
+:root{
+--Green: hsl(75, 94%, 57%);
+--White: hsl(0, 0%, 100%);
+--Greylow: hsl(0, 0%, 20%);
+--Greymid: hsl(0, 0%, 12%);
+--Greyhigh: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 30%;
+    border-radius: 50%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Greyhigh);
+    color: var(--White);
+}
+
+.container{
+    background-color: var(--Greymid);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    border-radius: 0.625rem;
+    padding: 2.5rem;
+    gap: 1rem;
+    max-width: 375px;
+    width: 90%;   
+}
+
+header{
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h2{
+    color: var(--Green);
+    font-family: "Inter";
+    font-weight: 600;
+}
+
+nav{
+    display: flex;
+    width: 100%; /*make sure the nav is full width to container*/
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; /*make sure the ul is full to nav */
+}
+
+li{
+    list-style-type: none;
+    width: 100%; /*make sure the li is full to ul*/
+    text-align: center;
+}
+
+a{
+    color: var(--White);
+    background-color: var(--Greylow);
+    text-decoration: none;
+    display: block; /*make sure the clickable area is full to li borders*/
+}
+
+/*
+@media (min-width: 375px){
+    .container{
+        width: 375px;
+    }
+} */
